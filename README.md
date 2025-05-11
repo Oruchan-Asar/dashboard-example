@@ -1,27 +1,100 @@
-# Redux Toolkit TypeScript Example
+# Next.js Redux Toolkit Application
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+A modern web application built with Next.js 15, React 19, and Redux Toolkit, featuring a comprehensive set of features and modern development practices.
 
-**Redux Toolkit**(also known as "RTK" for short) provides a standardized way to write Redux logic. It includes utilities that help simplify many common use cases, including [store setup](https://redux-toolkit.js.org/api/configureStore), [creating reducers and writing immutable update logic](https://redux-toolkit.js.org/api/createreducer), and even [creating entire "slices" of state at once](https://redux-toolkit.js.org/api/createslice). This example showcases each of these features in conjunction with Next.js.
+## Features
 
-## Deploy Your Own
+- 🚀 **Modern Tech Stack**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
+  - Next.js 15
+  - React 19
+  - TypeScript
+  - Redux Toolkit for state management
+  - Tailwind CSS for styling
 
-## How to Use
+- 🎨 **UI Components**
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+  - Radix UI components for accessible UI elements
+  - Dark/Light theme support
+  - Responsive design
+  - Data visualization with Recharts
+  - Table functionality with TanStack Table
+
+- 📱 **Application Sections**
+  - User Management
+  - Posts Management
+  - Albums Gallery
+  - Todo List
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npx create-next-app --example with-redux with-redux-app
+git clone <repository-url>
+cd next-redux
 ```
+
+2. Install dependencies:
 
 ```bash
-yarn create next-app --example with-redux with-redux-app
+npm install
+# or
+yarn install
+# or
+pnpm install
 ```
+
+3. Run the development server:
 
 ```bash
-pnpm create next-app --example with-redux with-redux-app
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+├── app/              # Next.js app directory
+│   ├── albums/      # Albums section
+│   ├── posts/       # Posts section
+│   ├── todos/       # Todo list section
+│   └── users/       # User management section
+├── components/      # Reusable UI components
+├── lib/            # Utility functions and shared code
+├── hooks/          # Custom React hooks
+└── public/         # Static assets
+```
+
+## Development
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Recharts](https://recharts.org/)
+- [TanStack Table](https://tanstack.com/table)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
