@@ -4,14 +4,15 @@ import { usersApiSlice } from "./features/usersApiSlice";
 import { postsApiSlice } from "./features/postsApiSlice";
 import { commentsApiSlice } from "./features/commentsApiSlice";
 import { albumsApiSlice } from "./features/albumsApiSlice";
-
+import { todosApiSlice } from "./features/todosApiSlice";
 // `combineSlices` automatically combines the reducers using
 // their `reducerPath`s, therefore we no longer need to call `combineReducers`.
 const rootReducer = combineSlices(
   usersApiSlice,
   postsApiSlice,
   commentsApiSlice,
-  albumsApiSlice
+  albumsApiSlice,
+  todosApiSlice
 );
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>;
@@ -30,7 +31,8 @@ export const makeStore = () => {
         usersApiSlice.middleware,
         postsApiSlice.middleware,
         commentsApiSlice.middleware,
-        albumsApiSlice.middleware
+        albumsApiSlice.middleware,
+        todosApiSlice.middleware
       );
     },
   });

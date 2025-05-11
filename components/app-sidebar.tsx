@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { Album, Home, User, File } from "lucide-react";
+import { Album, Home, User, File, List } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   Sidebar,
@@ -21,7 +22,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 const navItems = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
@@ -39,10 +40,17 @@ const navItems = [
     url: "/albums",
     icon: Album,
   },
+  {
+    title: "Todo",
+    url: "/todos",
+    icon: List,
+  },
 ];
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { state } = useSidebar();
+  const pathname = usePathname();
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -69,7 +77,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           {navItems.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
+              <SidebarMenuButton asChild isActive={item.url === pathname}>
                 <Link href={item.url}>
                   <item.icon />
                   <span>{item.title}</span>
